@@ -2,8 +2,71 @@
 
 
 export default {
-    name: "HeaderMy"
+    name: "HeaderMy",
+
+    data() {
+
+        return {
+
+            links: [
+                {
+                    text: "CHARACTERS",
+                    href: "#",
+                    current: false
+                },
+                {
+                    text: "COMICS",
+                    href: "#",
+                    current: true
+                },
+                {
+                    text: "MOVIES",
+                    href: "#",
+                    current: false
+                },
+                {
+                    text: "TV",
+                    href: "#",
+                    current: false
+                },
+                {
+                    text: "GAMES",
+                    href: "#",
+                    current: false
+                },
+                {
+                    text: "COLLECTIBLES",
+                    href: "#",
+                    current: false
+                },
+                {
+                    text: "VIDEOS",
+                    href: "#",
+                    current: false
+                },
+                {
+                    text: "FANS",
+                    href: "#",
+                    current: false
+                },
+                {
+                    text: "NEWS",
+                    href: "#",
+                    current: false
+                },
+                {
+                    text: "SHOP",
+                    href: "#",
+                    current: false
+                }
+
+            ]
+
+        }
+    }
 }
+
+
 
 
 </script>
@@ -19,63 +82,9 @@ export default {
         <!-- navigazione principale -->
         <nav>
             <ul>
-                <li>
-                    <a href="#">
-                        <h4>CHARACTERS</h4>
-                    </a>
-
-                </li>
-                <li>
-                    <a href="#">
-                        <h4>COMICS</h4>
-                    </a>
-
-                </li>
-                <li>
-                    <a href="#">
-                        <h4>MOVIES</h4>
-                    </a>
-
-                </li>
-                <li>
-                    <a href="#">
-                        <h4>TV</h4>
-                    </a>
-
-                </li>
-                <li>
-                    <a href="#">
-                        <h4>GAMES</h4>
-                    </a>
-
-                </li>
-                <li>
-                    <a href="#">
-                        <h4>COLLECTIBLES</h4>
-                    </a>
-
-                </li>
-                <li>
-                    <a href="#">
-                        <h4>VIDEOS</h4>
-                    </a>
-
-                </li>
-                <li>
-                    <a href="#">
-                        <h4>FANS</h4>
-                    </a>
-
-                </li>
-                <li>
-                    <a href="#">
-                        <h4>NEWS</h4>
-                    </a>
-
-                </li>
-                <li>
-                    <a href="#">
-                        <h4>SHOP</h4>
+                <li v-for="link in links">
+                    <a :href="link.href" :class="link.current ? 'active' : ''">
+                        <h4>{{ link.text }}</h4>
                     </a>
 
                 </li>
@@ -126,6 +135,10 @@ header {
                 display: inline-block;
                 padding: 10px;
                 text-decoration: none;
+
+                &.active {
+                    color: $secondary;
+                }
 
                 h4 {
 
