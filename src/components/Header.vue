@@ -116,12 +116,18 @@ header {
             padding: 10px;
             text-decoration: none;
             font-weight: 600;
-            transition: background 0.3s;
 
-            &.active,
-            &:hover {
-                background: $secondary;
+            h4 {
+
+
+
+                &.active,
+                &:hover {
+                    color: $secondary;
+                }
             }
+
+
         }
     }
 
