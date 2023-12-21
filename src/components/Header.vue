@@ -9,7 +9,79 @@ export default {
 </script>
 
 <template>
-    <header>
+    <header class="container">
+
+        <!-- Logo sito -->
+        <div class="logo">
+            <img src="/img/dc-logo.png" alt="">
+        </div>
+
+        <!-- navigazione principale -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">
+                        <h4>CHARACTERS</h4>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#">
+                        <h4>COMICS</h4>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#">
+                        <h4>MOVIES</h4>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#">
+                        <h4>TV</h4>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#">
+                        <h4>GAMES</h4>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#">
+                        <h4>COLLECTIBLES</h4>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#">
+                        <h4>VIDEOS</h4>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#">
+                        <h4>FANS</h4>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#">
+                        <h4>NEWS</h4>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#">
+                        <h4>SHOP</h4>
+                    </a>
+
+                </li>
+
+            </ul>
+        </nav>
 
     </header>
 </template>
@@ -22,20 +94,26 @@ export default {
 
 header {
 
+    @include center();
+
+    .logo {
+        margin: 2.5rem 1rem 4rem;
+        @include center(left);
+        flex-basis: 50%;
+    }
 
 
     ul {
 
-        text-align: right;
-
         list-style: none;
         margin: 2.5rem 1rem 4rem;
         @include center(right);
+        flex-basis: 50%;
 
         li a {
 
             display: inline-block;
-            padding: 1rem;
+            padding: 10px;
             text-decoration: none;
             font-weight: 600;
             transition: background 0.3s;
