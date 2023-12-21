@@ -2,7 +2,7 @@
 
 
 export default {
-    name: "Header"
+    name: "HeaderMy"
 }
 
 
@@ -84,6 +84,16 @@ export default {
         </nav>
 
     </header>
+
+    <div class="backgroundHead">
+
+        <header class="container">
+            <div class="Second_line">
+                <h2> -- Content Goes Here -- </h2>
+            </div>
+        </header>
+
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -97,37 +107,53 @@ header {
     @include center();
 
     .logo {
+        margin: 5px;
+        flex-grow: 1;
+    }
+
+    nav {
+
         margin-top: 30px;
-        @include center(left);
-        flex-basis: 50%;
+        flex-grow: 1;
+
+        ul {
+
+            list-style: none;
+            @include center(right);
+
+            li a {
+
+                display: inline-block;
+                padding: 10px;
+                text-decoration: none;
+
+                h4 {
+
+                    font-weight: 600;
+
+                    &.active,
+                    &:hover {
+                        color: $secondary;
+                    }
+                }
+
+
+            }
+        }
     }
 
 
-    ul {
 
-        list-style: none;
-        margin-top: 60px;
-        @include center(right);
-        flex-basis: 50%;
+    .Second_line {
+        @include center(left);
+        flex-grow: 1;
+        height: 100px;
 
-        li a {
-
-            display: inline-block;
-            padding: 10px;
-            text-decoration: none;
-            font-weight: 600;
-
-            h4 {
-
-
-
-                &.active,
-                &:hover {
-                    color: $secondary;
-                }
-            }
-
-
+        h2 {
+            padding: 35px;
+            color: white;
+            text-align: center;
+            font-size: 30px;
         }
     }
 
