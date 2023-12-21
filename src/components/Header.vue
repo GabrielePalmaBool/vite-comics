@@ -97,7 +97,7 @@ header {
     @include center();
 
     .logo {
-        margin: 2.5rem 1rem 4rem;
+        margin-top: 30px;
         @include center(left);
         flex-basis: 50%;
     }
@@ -106,7 +106,7 @@ header {
     ul {
 
         list-style: none;
-        margin: 2.5rem 1rem 4rem;
+        margin-top: 60px;
         @include center(right);
         flex-basis: 50%;
 
