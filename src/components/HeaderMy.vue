@@ -172,14 +172,22 @@ export default {
 
     </header>
 
+    <!-- Seconda Sezione header  Black-->
     <div class="backgroundHead">
 
         <header class="container">
+
             <div class="Second_line">
 
+                <!-- Richiamo il mio componente che dovrà ripetersi -->
                 <ComixCard v-for="(Com, i) in comixs" :key="i" :infoComic="Com" />
 
             </div>
+
+            <div class="Load">
+                <a href="#">Load more</a>
+            </div>
+
         </header>
 
     </div>
@@ -235,12 +243,30 @@ header {
         }
     }
 
-
-
     .Second_line {
-        @include center(wrap);
-        flex-grow: 1;
-        margin: 10px 0px 60px 0px;
+        @include center();
+        margin: 10px 0px 40px 0px;
+    }
+
+    .Load {
+
+        margin: 10px 0px 30px 0px;
+
+
+        a {
+            text-decoration: none;
+            color: $tertiary;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 5px 15px 5px 15px;
+            background-color: blue;
+
+        }
+
+        a:hover {
+            color: $primary;
+        }
     }
 
 }

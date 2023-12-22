@@ -22,15 +22,28 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 
+
+
 .CmxCard {
     width: 180px;
     padding: 10px;
     margin: 30px 0px 10px 0px;
 
-    h3 {
-        color: $tertiary;
-        text-align: center;
-        font-size: 17px;
+    a {
+        text-decoration: none;
+
+        h3 {
+            color: $tertiary;
+            text-align: center;
+            font-size: 17px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        h3:hover {
+            color: $primary;
+        }
     }
+
 }
 </style>
