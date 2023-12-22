@@ -1,8 +1,40 @@
 <script >
 export default {
 
-    name: "ListFunctions"
+    name: "ListFunctions",
+
+    data() {
+
+        return {
+
+            links: [
+                {
+                    title: "DIGITAL COMICS",
+                    href: "/img/buy-comics-digital-comics.png",
+                },
+                {
+                    title: "DC MERCHANDISE",
+                    href: "/img/buy-comics-merchandise.png",
+                },
+                {
+                    title: "SUBSCRIPTION",
+                    href: "/img/buy-comics-subscriptions.png",
+                },
+                {
+                    title: "COMIC SHOP LOCATORS",
+                    href: "/img/buy-comics-shop-locator.png",
+                },
+                {
+                    title: "DC POWER VISA",
+                    href: "/img/buy-comics-digital-comics.png",
+                }
+            ]
+        }
+    }
 }
+
+
+
 </script>
 
 <template>
@@ -12,39 +44,13 @@ export default {
             <div class="First_line">
                 <nav>
                     <ul>
-                        <li>
-                            <a href="#">
-                                <img src="/img/buy-comics-digital-comics.png" class="logo" alt="logoMain1">
-                                <h4>DIGITAL COMICS</h4>
+                        <li v-for="link in links">
+                            <a :href="link.href">
+                                <img :src="link.href" class="logo" alt="logoMain1">
+                                <h4>{{ link.title }}</h4>
                             </a>
 
                         </li>
-                        <li>
-                            <a href="#">
-                                <h4>DC MERCHANDISE</h4>
-                            </a>
-
-                        </li>
-                        <li>
-                            <a href="#">
-                                <h4>SUBSCRIPTION</h4>
-                            </a>
-
-                        </li>
-                        <li>
-                            <a href="#">
-                                <h4>COMIC SHOP LOCATOR</h4>
-                            </a>
-
-                        </li>
-                        <li>
-                            <a href="#">
-                                <h4>DC POWER VISA</h4>
-                            </a>
-
-                        </li>
-
-
                     </ul>
                 </nav>
             </div>
@@ -79,17 +85,17 @@ main {
 
                 list-style: none;
                 @include center();
-                margin: 0;
+                margin-top: 20px;
 
                 li a {
 
-                    margin: 25px;
+                    margin: 10px;
                     text-decoration: none;
 
                     .logo {
                         max-width: 70px;
                         max-height: 70px;
-                        margin: 10px;
+                        padding: 5px;
                         vertical-align: middle;
                     }
 
@@ -99,12 +105,12 @@ main {
                         color: $tertiary;
                         display: inline-block;
 
-                        vertical-a &.active,
+                        &.active,
                         &:hover {
                             color: $primary;
                         }
-                    }
 
+                    }
 
                 }
             }
