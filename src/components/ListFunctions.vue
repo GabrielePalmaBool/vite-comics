@@ -61,7 +61,9 @@ export default {
 
 main {
 
-
+    .backgroundMain {
+        background-color: $secondary;
+    }
 
     .First_line {
 
@@ -99,7 +101,7 @@ main {
 
                         vertical-a &.active,
                         &:hover {
-                            color: $secondary;
+                            color: $primary;
                         }
                     }
 

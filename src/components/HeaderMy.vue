@@ -204,6 +204,10 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
+.backgroundHead {
+    background-color: $primary;
+}
+
 header {
 
     @include center();

@@ -41,7 +41,7 @@ export default {
         }
 
         h3:hover {
-            color: $primary;
+            color: $secondary;
         }
     }
 
