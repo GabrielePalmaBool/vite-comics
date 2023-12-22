@@ -175,7 +175,12 @@ export default {
     <!-- Seconda Sezione header  Black-->
     <div class="backgroundHead">
 
+
         <header class="container">
+
+            <div class="Current_list">
+                <h2>CURRENT SERIES</h2>
+            </div>
 
             <div class="Second_line">
 
@@ -243,6 +248,18 @@ header {
         }
     }
 
+    .Current_list {
+        margin: -20px 550px 0px 0px;
+        padding: 10px;
+        width: 230px;
+        font-weight: bold;
+        background-color: $secondary;
+
+        h2 {
+            color: $tertiary;
+        }
+    }
+
     .Second_line {
         @include center();
         margin: 10px 0px 40px 0px;
@@ -260,7 +277,7 @@ header {
             font-size: 20px;
             font-weight: bold;
             padding: 5px 15px 5px 15px;
-            background-color: blue;
+            background-color: $secondary;
 
         }
 
