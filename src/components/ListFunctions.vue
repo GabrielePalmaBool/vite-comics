@@ -94,7 +94,7 @@ main {
                     h4 {
 
                         font-weight: 600;
-                        color: white;
+                        color: $tertiary;
                         display: inline-block;
 
                         vertical-a &.active,

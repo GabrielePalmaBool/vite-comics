@@ -12,15 +12,25 @@ export default {
 
 <template>
     <div class="CmxCard">
-        <img :src="infoComic.thumb" alt="">
-        <h3></h3>
+        <a :href="infoComic.thumb">
+            <img :src="infoComic.thumb" alt="immagine fumetto">
+            <h3>{{ infoComic.series }}</h3>
+        </a>
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '../styles/partials/variables' as *;
+
 .CmxCard {
     width: 180px;
-
     padding: 10px;
+    margin: 30px 0px 10px 0px;
+
+    h3 {
+        color: $tertiary;
+        text-align: center;
+        font-size: 17px;
+    }
 }
 </style>

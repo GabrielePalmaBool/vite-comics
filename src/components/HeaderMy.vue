@@ -240,14 +240,7 @@ header {
     .Second_line {
         @include center(wrap);
         flex-grow: 1;
-
-
-        h2 {
-            padding: 35px;
-            color: white;
-            text-align: center;
-            font-size: 30px;
-        }
+        margin: 10px 0px 60px 0px;
     }
 
 }
