@@ -1,10 +1,9 @@
 @mixin center($type: 'both') {
 
     display: flex;
-    flex-wrap: wrap;
 
-    @if $type =='left' {
-        justify-content: flex-start;
+    @if $type =='wrap' {
+        flex-wrap: wrap;
 
     }
 
@@ -15,5 +14,6 @@
     @else if $type =='both' {
         justify-content: center;
     }
+
 
 }
