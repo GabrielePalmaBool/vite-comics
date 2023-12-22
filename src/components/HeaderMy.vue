@@ -172,7 +172,10 @@ export default {
 
     </header>
 
-    <!-- Seconda Sezione header  Black-->
+    <!-- Seconda Sezione header  jumbo-->
+    <div class="Jumbo"></div>
+
+    <!-- Terza Sezione header  Black-->
     <div class="backgroundHead">
 
 
@@ -206,6 +209,12 @@ export default {
 
 .backgroundHead {
     background-color: $primary;
+}
+
+.Jumbo {
+    background-image: url("/img/jumbotron.jpg");
+    width: 100%;
+    min-height: 500px;
 }
 
 header {
