@@ -194,7 +194,7 @@ export default {
                 </div>
 
                 <div class="subcol">
-                    <h2>SITE</h2>
+                    <h2>SHOP</h2>
                     <ul>
                         <!-- Richiamo il mio componente che dovrà ripetersi per col4-->
                         <VoiceFotCol v-for="(link, i) in linksCol4" :key="i" :linkVoice="link" />
@@ -284,8 +284,8 @@ footer {
         }
 
         .subcol {
-            flex-basis: 100%;
-            margin-top: -95px;
+            flex-basis: 17%;
+            margin: 320px 0px 0px -580px;
         }
 
         h2 {
