@@ -264,8 +264,6 @@ header {
     .Current_list {
         margin: -20px 550px 0px 0px;
         padding: 10px;
-        width: 230px;
-        font-weight: bold;
         background-color: $secondary;
 
         h2 {

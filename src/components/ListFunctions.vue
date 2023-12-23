@@ -63,13 +63,11 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
-
+.backgroundMain {
+    background-color: $secondary;
+}
 
 main {
-
-    .backgroundMain {
-        background-color: $secondary;
-    }
 
     .First_line {
 

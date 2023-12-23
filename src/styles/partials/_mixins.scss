@@ -4,7 +4,7 @@
     flex-wrap: wrap;
 
     @if $type =='left' {
-        justify-content: space-between;
+        justify-content: flex-start;
 
     }
 

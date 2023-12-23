@@ -1,11 +1,13 @@
 <script>
 import HeaderMy from './components/HeaderMy.vue'
 import ListFunctions from './components/ListFunctions.vue'
+import FooterMy from './components/FooterMy.vue'
 export default {
 
   components: {
     HeaderMy,
-    ListFunctions
+    ListFunctions,
+    FooterMy
   }
 
 }
@@ -14,12 +16,9 @@ export default {
 </script>
 
 <template>
-  <header>
-    <HeaderMy />
-  </header>
-  <main>
-    <ListFunctions />
-  </main>
+  <HeaderMy />
+  <ListFunctions />
+  <FooterMy />
 </template>
 
 <style lang="scss">
