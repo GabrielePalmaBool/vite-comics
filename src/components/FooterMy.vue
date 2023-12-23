@@ -354,7 +354,10 @@ footer {
             a {
                 cursor: pointer;
                 margin: 10px;
+            }
 
+            a:hover {
+                color: $tertiary;
             }
         }
 
