@@ -23,7 +23,6 @@ export default {
 @use '../styles/partials/variables' as *;
 
 
-
 .CmxCard {
     width: 180px;
     padding: 10px;
