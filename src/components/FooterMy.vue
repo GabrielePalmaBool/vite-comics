@@ -1,11 +1,14 @@
 <script >
+
+import VoiceFotCol from './VoiceFotCol.vue'
+
 export default {
 
     name: "FooterMy",
 
-    // components: {
-    //     ComixCard
-    // },
+    components: {
+        VoiceFotCol
+    },
 
     data() {
 
@@ -164,13 +167,10 @@ export default {
             <nav>
                 <div class="col">
                     <h2>DC COMICS</h2>
-                    <ul>
-                        <li v-for="link in linksCol1">
-                            <a :href="link.href" :class="link.current ? 'active' : ''">
-                                <p>{{ link.text }}</p>
-                            </a>
 
-                        </li>
+                    <ul>
+                        <!-- Richiamo il mio componente che dovrà ripetersi per col1-->
+                        <VoiceFotCol v-for="(link, i) in linksCol1" :key="i" :linkVoice="link" />
                     </ul>
 
                 </div>
@@ -178,12 +178,8 @@ export default {
                 <div class="col">
                     <h2>DC</h2>
                     <ul>
-                        <li v-for="link in linksCol2">
-                            <a :href="link.href" :class="link.current ? 'active' : ''">
-                                <p>{{ link.text }}</p>
-                            </a>
-
-                        </li>
+                        <!-- Richiamo il mio componente che dovrà ripetersi per col2-->
+                        <VoiceFotCol v-for="(link, i) in linksCol2" :key="i" :linkVoice="link" />
                     </ul>
 
                 </div>
@@ -191,12 +187,8 @@ export default {
                 <div class="col">
                     <h2>SITE</h2>
                     <ul>
-                        <li v-for="link in linksCol3">
-                            <a :href="link.href" :class="link.current ? 'active' : ''">
-                                <p>{{ link.text }}</p>
-                            </a>
-
-                        </li>
+                        <!-- Richiamo il mio componente che dovrà ripetersi per col3-->
+                        <VoiceFotCol v-for="(link, i) in linksCol3" :key="i" :linkVoice="link" />
                     </ul>
 
                 </div>
@@ -204,12 +196,8 @@ export default {
                 <div class="subcol">
                     <h2>SITE</h2>
                     <ul>
-                        <li v-for="link in linksCol4">
-                            <a :href="link.href" :class="link.current ? 'active' : ''">
-                                <p>{{ link.text }}</p>
-                            </a>
-
-                        </li>
+                        <!-- Richiamo il mio componente che dovrà ripetersi per col4-->
+                        <VoiceFotCol v-for="(link, i) in linksCol4" :key="i" :linkVoice="link" />
                     </ul>
 
                 </div>
@@ -220,7 +208,44 @@ export default {
             <div class="Logo"></div>
 
         </footer>
+    </div>
 
+    <!-- Secondo footer  -->
+    <div class="backgroundFoot2">
+        <!-- Secondo footer  -->
+        <footer class="container">
+
+            <div class="SignUp">
+                <a href="#">
+                    <p>SIG UP NOW!</p>
+                </a>
+            </div>
+
+            <div class="FollowUs">
+
+                <h2>FOLLOW US</h2>
+
+                <div class="icon">
+                    <a href="#">
+                        <img src="/img/footer-facebook.png" alt="LogoFooter1">
+                    </a>
+                    <a href="#">
+                        <img src="/img/footer-periscope.png" alt="LogoFooter2">
+                    </a>
+                    <a href="#">
+                        <img src="/img/footer-pinterest.png" alt="LogoFooter3">
+                    </a>
+                    <a href="#">
+                        <img src="/img/footer-twitter.png" alt="LogoFooter4">
+                    </a>
+                    <a href="#">
+                        <img src="/img/footer-youtube.png" alt="LogoFooter5">
+                    </a>
+                </div>
+
+            </div>
+
+        </footer>
     </div>
 </template>
 
@@ -235,12 +260,18 @@ export default {
     background-size: 100% 100%;
 }
 
+.backgroundFoot2 {
+    background-color: rgb(48, 48, 48);
+    min-height: 100px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
 
 footer {
 
-    @include center();
-
     position: relative;
+
+    @include center();
 
     nav {
         display: flex;
@@ -266,29 +297,6 @@ footer {
 
             list-style: none;
 
-            li a {
-
-                display: inline-block;
-                padding: 5px;
-                text-decoration: none;
-                color: $tertiary;
-
-                &.active {
-                    color: $secondary;
-                }
-
-                p {
-
-                    font-weight: 600;
-
-                    &.active,
-                    &:hover {
-                        color: $secondary;
-                    }
-                }
-
-
-            }
         }
     }
 
@@ -300,6 +308,56 @@ footer {
         background-image: url("/img/dc-logo-bg.png");
         width: 560px;
         height: 500px;
+    }
+
+    .SignUp {
+
+        flex-basis: 50%;
+        margin-top: 30px;
+
+        a {
+
+            padding: 15px 20px 15px 20px;
+            text-decoration: none;
+            border: 2px solid $secondary;
+            color: $tertiary;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+
+            p {
+                display: inline-block;
+            }
+        }
+
+        a:hover {
+            color: $secondary;
+        }
+
+    }
+
+    .FollowUs {
+        margin-top: 30px;
+        flex-basis: 50%;
+
+        h2 {
+            display: inline;
+            color: $secondary;
+
+        }
+
+        .icon {
+
+            margin: -30px 0px 0px 155px;
+            vertical-align: middle;
+
+            a {
+                cursor: pointer;
+                margin: 10px;
+
+            }
+        }
+
     }
 }
 </style>
