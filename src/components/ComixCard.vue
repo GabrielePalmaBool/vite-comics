@@ -11,7 +11,13 @@ export default {
 </script>
 
 <template>
-    <div class="CmxCard">
+    <li v-if="infoComic.href">
+        <a :href="infoComic.href" :class="infoComic.current ? 'active' : ''">
+            <h4>{{ infoComic.text }}</h4>
+        </a>
+
+    </li>
+    <div class="CmxCard" v-else>
         <a :href="infoComic.thumb">
             <img :src="infoComic.thumb" alt="immagine fumetto">
             <h3>{{ infoComic.series }}</h3>
@@ -43,6 +49,29 @@ export default {
             color: $secondary;
         }
     }
+
+}
+
+li a {
+
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+
+    &.active {
+        color: $secondary;
+    }
+
+    h4 {
+
+        font-weight: 600;
+
+        &.active,
+        &:hover {
+            color: $secondary;
+        }
+    }
+
 
 }
 </style>

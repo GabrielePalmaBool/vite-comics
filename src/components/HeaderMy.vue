@@ -160,12 +160,9 @@ export default {
         <!-- navigazione principale -->
         <nav>
             <ul>
-                <li v-for="link in links">
-                    <a :href="link.href" :class="link.current ? 'active' : ''">
-                        <h4>{{ link.text }}</h4>
-                    </a>
 
-                </li>
+                <!-- Richiamo il mio componente che dovrà ripetersi -->
+                <ComixCard v-for="(link, i) in links" :key="i" :infoComic="link" />
 
             </ul>
         </nav>
@@ -236,28 +233,6 @@ header {
             list-style: none;
             @include center(right);
 
-            li a {
-
-                display: inline-block;
-                padding: 10px;
-                text-decoration: none;
-
-                &.active {
-                    color: $secondary;
-                }
-
-                h4 {
-
-                    font-weight: 600;
-
-                    &.active,
-                    &:hover {
-                        color: $secondary;
-                    }
-                }
-
-
-            }
         }
     }
 

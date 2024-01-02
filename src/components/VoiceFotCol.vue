@@ -24,6 +24,7 @@ export default {
 
 
 li a {
+
     display: inline-block;
     padding: 5px;
     text-decoration: none;
