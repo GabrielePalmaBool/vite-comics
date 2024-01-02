@@ -2,6 +2,7 @@
 import HeaderMy from './components/HeaderMy.vue'
 import ListFunctions from './components/ListFunctions.vue'
 import FooterMy from './components/FooterMy.vue'
+
 export default {
 
   components: {
@@ -11,8 +12,6 @@ export default {
   }
 
 }
-
-
 </script>
 
 <template>
